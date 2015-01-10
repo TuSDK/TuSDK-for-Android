@@ -8,7 +8,8 @@
         android:id="@+id/lsq_imageWrapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lsq_bottomBar"
+        android:layout_above="@+id/lsq_optionBar"
+        android:background="@color/lsq_color_black"
         android:clipChildren="false"
         android:clipToPadding="false" >
     </RelativeLayout>
@@ -17,23 +18,45 @@
         android:id="@+id/lsq_cutRegionView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lsq_bottomBar" />
+        android:layout_above="@+id/lsq_optionBar" />
 
-    <org.lasque.tusdk.core.view.widget.button.TuSdkImageButton
-        android:id="@+id/lsq_backButton"
-        android:layout_width="40dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/lsq_alpha_black_B4"
-        android:scaleType="center"
-        android:src="@drawable/lsq_style_default_nav_button_back" />
-
-    <include
-        android:id="@+id/lsq_filter_bar"
+    <LinearLayout
+        android:id="@+id/lsq_optionBar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_above="@+id/lsq_bottomBar"
-        layout="@layout/tusdk_impl_component_widget_filter_bar" />
+        android:orientation="horizontal" >
+
+        <org.lasque.tusdk.core.view.widget.button.TuSdkTextButton
+            android:id="@+id/lsq_ratio_orgin_Button"
+            style="@style/lsq_edit_entryOptionButton"
+            android:drawableTop="@drawable/lsq_style_default_ratio_orgin"
+            android:text="@string/lsq_edit_cuter_ratio_orgin" />
+
+        <org.lasque.tusdk.core.view.widget.button.TuSdkTextButton
+            android:id="@+id/lsq_ratio_1_1_Button"
+            style="@style/lsq_edit_entryOptionButton"
+            android:drawableTop="@drawable/lsq_style_default_ratio_1_1"
+            android:text="@string/lsq_edit_cuter_ratio_1_1" />
+
+        <org.lasque.tusdk.core.view.widget.button.TuSdkTextButton
+            android:id="@+id/lsq_ratio_2_3_Button"
+            style="@style/lsq_edit_entryOptionButton"
+            android:drawableTop="@drawable/lsq_style_default_ratio_2_3"
+            android:text="@string/lsq_edit_cuter_ratio_2_3" />
+
+        <org.lasque.tusdk.core.view.widget.button.TuSdkTextButton
+            android:id="@+id/lsq_ratio_3_4_Button"
+            style="@style/lsq_edit_entryOptionButton"
+            android:drawableTop="@drawable/lsq_style_default_ratio_3_4"
+            android:text="@string/lsq_edit_cuter_ratio_3_4" />
+
+        <org.lasque.tusdk.core.view.widget.button.TuSdkTextButton
+            android:id="@+id/lsq_ratio_9_16_Button"
+            style="@style/lsq_edit_entryOptionButton"
+            android:drawableTop="@drawable/lsq_style_default_ratio_9_16"
+            android:text="@string/lsq_edit_cuter_ratio_9_16" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lsq_bottomBar"
@@ -44,12 +67,12 @@
         android:orientation="horizontal" >
 
         <org.lasque.tusdk.core.view.widget.button.TuSdkImageButton
-            android:id="@+id/lsq_filterButton"
+            android:id="@+id/lsq_cancelButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
-            android:src="@drawable/lsq_style_default_camera_bg_filter_blue" />
+            android:src="@drawable/lsq_style_default_edit_button_cancel" />
 
         <org.lasque.tusdk.core.view.widget.button.TuSdkImageButton
             android:id="@+id/lsq_trunButton"
@@ -67,16 +90,13 @@
             android:scaleType="center"
             android:src="@drawable/lsq_style_default_edit_button_horizontal_mirror" />
 
-        <org.lasque.tusdk.core.view.widget.button.TuSdkTextButton
+        <org.lasque.tusdk.core.view.widget.button.TuSdkImageButton
             android:id="@+id/lsq_completeButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/lsq_link_action"
-            android:gravity="center"
-            android:text="@string/lsq_edit_button_complete"
-            android:textColor="@color/lsq_color_white"
-            android:textSize="16sp" />
+            android:scaleType="center"
+            android:src="@drawable/lsq_style_default_edit_button_completed" />
     </LinearLayout>
 
 </RelativeLayout>
