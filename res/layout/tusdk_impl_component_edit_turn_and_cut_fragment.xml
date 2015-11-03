@@ -46,7 +46,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
-            android:src="@drawable/lsq_style_default_camera_bg_filter_blue" />
+            android:src="@drawable/lsq_style_default_camera_bg_filter" />
 
         <org.lasque.tusdk.core.view.widget.button.TuSdkImageButton
             android:id="@+id/lsq_trunButton"
